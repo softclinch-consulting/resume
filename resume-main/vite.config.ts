@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
-import path from 'path'
+import { fileURLToPath } from 'node:url'
 import tailwindcss from '@tailwindcss/vite'
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react-swc'
 
 export default defineConfig({
   // Ensure correct asset paths when deployed to GitHub Pages project sites
@@ -21,8 +21,16 @@ export default defineConfig({
   resolve: {
     alias: {
       // Alias @ to the src directory
-      '@': path.resolve(__dirname, './src'),
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
     },
+  },
+
+  // Avoid esbuild usage when child-process spawning is restricted.
+  esbuild: false,
+  optimizeDeps: {
+    disabled: true,
+    noDiscovery: true,
+    include: [],
   },
 
   // File types to support raw imports. Never add .css, .tsx, or .ts files to this.

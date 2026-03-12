@@ -204,9 +204,9 @@ export default function App() {
                   <p className="font-semibold text-gray-900 text-sm">Stock, Currency & Commodity Trading Certification</p>
                 </div>
                 <div className="bg-white p-3 rounded border-l-4 border-blue-900">
-                  <p className="font-semibold text-gray-900 text-sm">Micro Finance Executive Course</p>
+                  <p className="font-semibold text-gray-900 text-sm">TNSD - Micro Finance Executive Course</p>
                   <p className="text-xs text-gray-600 mt-1">Duration: 2 Months</p>
-                  <p className="text-xs text-gray-600">TNSD – Tamil Nadu Skill Development Certification Course</p>
+                  <p className="text-xs text-gray-600">Tamil Nadu Skill Development Certification Course</p>
                 </div>
               </div>
             </section>
